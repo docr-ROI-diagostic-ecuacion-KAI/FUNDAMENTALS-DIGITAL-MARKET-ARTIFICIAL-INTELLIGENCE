@@ -1,0 +1,32 @@
+DOCROI ACADEMY - ACTIVACION DIRECTO - V23
+
+TU PROYECTO: https://fundamentals-digital-market-artific-five.vercel.app/
+
+1. Ya se ha creado en Supabase el esquema publico con kai_live_sessions,
+   kai_live_attendance y kai_live_answers. No vuelvas a ejecutar el SQL.
+2. En la RAIZ del repositorio GitHub publica estos dos ficheros:
+   index.html (actualizado para publicar la clave de Supabase moderna)
+   config.js (contiene URL y clave PUBLICA de este proyecto)
+3. Al completar el despliegue de Vercel, abre el INDEX desde HTTPS.
+4. Abre Admin -> Encuesta / Nueva sesion y comprueba que indique LIVE BACKEND.
+5. Abre la URL del QR en otra ventana privada. Comprueba que sale
+   el formulario de estudiante, NO el panel de profesor.
+6. Envia tres respuestas ficticias diferentes. Vuelve al radar.
+   Debe aumentar el total y el radar se mostrara a partir de tres.
+7. Supabase > Table Editor debe mostrar registros en sessions,
+   attendance y answers.
+
+DIAGNOSTICO DE ERRORES
+- LOCAL DEMO: config.js no carga o contiene campos vacios; recarga sin cache.
+- 404 on /rpc/kai_create_session: funciones SQL no disponibles en el esquema public.
+- 401: revisa publishable key y que Data API este habilitada.
+- 400: revisa el mensaje devuelto por Supabase y los parametros.
+- Error de red: revisa extensiones, DNS y configuracion de fetch.
+
+SEGURIDAD
+La clave publishable es publica por diseno; no usar secret/service_role.
+No recolectes numeros reales de alumno hasta revisar RGPD, control
+de administracion, prevencion de abuso y retencion de datos.
+La URL de Vercel no hace privado el acceso.
+
+La presentacion sigue siendo la V0 de 60 diapositivas.
